@@ -44,7 +44,7 @@ export default {
   },
   methods:{
     submit: async function(){
-      let {status,data:{code,id}}=await this.$axios.post('/order/createOrder',{
+      let {status,data:{code,id}}=await this.$axios.post('http://118.31.69.104/order/createOrder',{
         count:this.cart[0].count,
         price:this.cart[0].price,
         id:this.cartNo
@@ -60,7 +60,7 @@ export default {
     }
   },
   async asyncData(ctx){
-    let {status,data:{code,data:{name,price}}}=await ctx.$axios.post('/cart/getCart',{
+    let {status,data:{code,data:{name,price}}}=await ctx.$axios.post('http://118.31.69.104/cart/getCart',{
       id:ctx.query.id
     })
     if(status===200&&code===0&&name){

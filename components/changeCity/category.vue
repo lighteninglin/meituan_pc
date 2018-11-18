@@ -34,7 +34,7 @@ export default {
   async mounted(){
     let self=this;
     let blocks=[]
-    let {status,data:{city}}=await self.$axios.get('/geo/city');
+    let {status,data:{city}}=await self.$axios.get('http://118.31.69.104/geo/city');
     if(status===200){
       let p
       let c

@@ -50,7 +50,7 @@
           count,
           pois
         }
-      } = await self.$axios.get('/search/resultsByKeywords', {
+      } = await self.$axios.get('http://118.31.69.104/search/resultsByKeywords', {
         params: {
           keyword: '景点',
           city: self.$store.state.geo.position.city
@@ -85,7 +85,7 @@
               count,
               pois
             }
-          } = await self.$axios.get('/search/resultsByKeywords', {
+          } = await self.$axios.get('http://118.31.69.104/search/resultsByKeywords', {
             params: {
               keyword,
               city: self.$store.state.geo.position.city

@@ -56,7 +56,7 @@ export default {
     }
   },
   async asyncData({app}) {
-    let { data } = await app.$axios.get('searchList')
+    let { data } = await app.$axios.get('http://118.31.69.104/searchList')
     return { items: data.list }
   },
   methods: {

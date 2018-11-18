@@ -76,7 +76,7 @@
           }
         })
         if (namePassBool && emailPassBool) {
-          self.$axios.post('/users/verify', {
+          self.$axios.post('http://118.31.69.104/users/verify', {
             username: encodeURIComponent(self.ruleForm.nickName),
             email: self.ruleForm.email
           }).then(({
@@ -103,7 +103,7 @@
         let self = this
         this.$refs["ruleForm"].validate((valid) => {
           if (valid) {
-            self.$axios.post('/users/signup', {
+            self.$axios.post('http://118.31.69.104/users/signup', {
                 username: encodeURIComponent(self.ruleForm.nickName),
                 password: CryptoJS.MD5(self.ruleForm.pass).toString(),
                 email: self.ruleForm.email,

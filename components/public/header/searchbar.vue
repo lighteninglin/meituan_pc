@@ -96,7 +96,7 @@
           data: {
             top
           }
-        } = await self.$axios.get('/search/top', {
+        } = await self.$axios.get('http://118.31.69.104/search/top', {
           params: {
             input: self.search,
             city

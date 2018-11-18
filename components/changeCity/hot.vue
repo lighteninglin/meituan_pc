@@ -20,7 +20,7 @@
         data: {
           hots
         }
-      } = await this.$axios.get('/geo/hotCity')
+      } = await this.$axios.get('http://118.31.69.104/geo/hotCity')
       if (status === 200) {
         this.list = hots
       }

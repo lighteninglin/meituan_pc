@@ -32,7 +32,7 @@
           data: {
             city
           }
-        } = await self.$axios.get(`/geo/province/${newPvalue}`)
+        } = await self.$axios.get(`http://118.31.69.104/geo/province/${newPvalue}`)
         if (status === 200) {
           self.city = city.map(item => ({
             value: item.id,
@@ -49,7 +49,7 @@
         data: {
           province
         }
-      } = await self.$axios.get('/geo/province')
+      } = await self.$axios.get('http://118.31.69.104/geo/province')
       if (status === 200) {
         self.province = province.map(item => ({
           value: item.id,
@@ -68,7 +68,7 @@
             data: {
               city
             }
-          } = await self.$axios.get('/geo/city')
+          } = await self.$axios.get('http://118.31.69.104/geo/city')
           if (status === 200) {
             self.cities = city.map(item => ({
               value: item.name

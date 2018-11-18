@@ -23,7 +23,7 @@ export default {
     }
   },
   async mounted(){
-    const {status,data:{user}} = await this.$axios.get('/users/getuser')
+    const {status,data:{user}} = await this.$axios.get('http://118.31.69.104/users/getuser')
     if(status===200){
       this.user=window.decodeURIComponent(user)
     }

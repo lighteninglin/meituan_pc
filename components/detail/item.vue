@@ -41,7 +41,7 @@
             code,
             id
           }
-        } = await this.$axios.post('/cart/create', {
+        } = await this.$axios.post('http://118.31.69.104/cart/create', {
           params: {
             id: Math.random().toString().slice(3, 9),
             detail: {

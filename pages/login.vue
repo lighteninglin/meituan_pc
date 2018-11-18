@@ -54,7 +54,7 @@ export default {
   methods: {
     login: function () {
       let self=this;
-      self.$axios.post('/users/signin',{
+      self.$axios.post('http://118.31.69.104/users/signin',{
         username:window.encodeURIComponent(self.username),
         password:CryptoJS.MD5(self.password).toString()
       }).then(({status,data})=>{

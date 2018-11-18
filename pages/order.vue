@@ -102,7 +102,7 @@ export default {
     }
   },
   async asyncData(ctx) {
-    let {status,data:{code,list}} = await ctx.$axios.post('/order/getOrders')
+    let {status,data:{code,list}} = await ctx.$axios.post('http://118.31.69.104/order/getOrders')
     if(status===200&&code===0&&list.length){
       return {
         list: list.map(item=>{

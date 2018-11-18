@@ -57,7 +57,7 @@
           more: list,
           login
         }
-      } = await ctx.$axios.get('/search/products', {
+      } = await ctx.$axios.get('http://118.31.69.104/search/products', {
         params: {
           keyword,
           type,
