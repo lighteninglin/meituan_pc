@@ -4,7 +4,7 @@
     <el-select v-model="pvalue" placeholder="省份">
       <el-option v-for="item in province" :key="item.value" :label="item.label" :value="item.value" />
     </el-select>
-    <el-select v-model="cvalue" :disabled="!city.length" placeholder="城市">
+    <el-select @change="changeCity" v-model="cvalue" :disabled="!city.length" placeholder="城市">
       <el-option v-for="item in city" :key="item.value" :label="item.label" :value="item.value" />
     </el-select>
     <el-autocomplete v-model="input" :fetch-suggestions="querySearchAsync" placeholder="请输入城市中文或拼音" @select="handleSelect" />
@@ -81,6 +81,12 @@
       }, 200),
       handleSelect: function(item) {
         let city = item.value
+        let province = ''
+        this.$store.dispatch('setPosition', {city, province})
+        window.location.href = "/"
+      },
+      changeCity: function(item) {
+        let city = item.label
         let province = ''
         this.$store.dispatch('setPosition', {city, province})
         window.location.href = "/"

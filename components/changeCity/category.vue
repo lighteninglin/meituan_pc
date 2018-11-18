@@ -9,7 +9,7 @@
     <dl v-for="item in block" :key="item.title" class="m-categroy-section">
       <dt :id="'city-'+item.title">{{ item.title }}</dt>
       <dd>
-        <span @click="changeCity" v-for="c in item.city" :key="c.name" :province="c.province">{{ c.name }}</span>
+        <span @click="changeCity" v-for="c in item.city" :key="c">{{ c }}</span>
       </dd>
     </dl>
   </div>
@@ -28,7 +28,8 @@
       changeCity: function(){
         let el = event.currentTarget
         let city = el.innerHTML
-        let province = el.province 
+        console.log(city)
+        let province = ''
         this.$store.dispatch('setPosition', {city, province})
         window.location.href = "/"
       }
@@ -53,10 +54,7 @@
             if (!d[p]) {
               d[p] = []
             }
-            d[p].push({
-              name: item.name,
-              province: item.province
-            })
+            d[p].push(item.name)
           }
         })
         for (let [k, v] of Object.entries(d)) {
