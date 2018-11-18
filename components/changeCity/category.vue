@@ -29,7 +29,7 @@
         let el = event.currentTarget
         let city = el.innerHTML
         this.$store.dispatch('setPositionCity', city)
-        window.location.href = "/"
+        this.$router.push({path:'/'})
       }
     },
     async mounted() {

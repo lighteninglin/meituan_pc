@@ -82,12 +82,12 @@
       handleSelect: function(item) {
         let city = item.value
         this.$store.dispatch('setPositionCity', city)
-        window.location.href = "/"
+        this.$router.push({path:'/'})
       },
       changeCity: function(item) {
         let city = item.label
         this.$store.dispatch('setPositionCity', city)
-        window.location.href = "/"
+        this.$router.push({path:'/'})
       }
     }
   }
