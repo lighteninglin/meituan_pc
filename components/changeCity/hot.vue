@@ -2,7 +2,7 @@
   <div class="m-hcity">
     <dl>
       <dt>热门城市：</dt>
-      <dd v-for="item in list" :key="item.id">{{item.name==='市辖区'?item.province:item.name}}</dd>
+      <dd @click="changeCity" v-for="item in list" :key="item.id" :province="item.province">{{item.name==='市辖区'?item.province:item.name}}</dd>
     </dl>
   </div>
 </template>
@@ -12,6 +12,15 @@
     data() {
       return {
         list: []
+      }
+    },
+    methods:{
+      changeCity: function(){
+        let el = event.currentTarget
+        let city = el.innerHTML
+        let province = el.province 
+        this.$store.dispatch('setPosition', {city, province})
+        window.location.href = "/"
       }
     },
     async mounted() {

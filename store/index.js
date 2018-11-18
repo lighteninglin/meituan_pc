@@ -30,6 +30,9 @@ const store = () => new Vuex.Store({
         }
       })
       commit('home/setHotPlace', status3 === 200 ? result : [])
+    },
+    setPosition({commit},val){
+      commit('geo/setPosition', val)
     }
   }
 })

@@ -80,7 +80,10 @@
         }
       }, 200),
       handleSelect: function(item) {
-        console.log(item.value)
+        let city = item.value
+        let province = ''
+        this.$store.dispatch('setPosition', {city, province})
+        window.location.href = "/"
       }
     }
   }
