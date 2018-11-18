@@ -60,8 +60,7 @@
         for (let [k, v] of Object.entries(d)) {
           blocks.push({
             title: k.toUpperCase(),
-            city: v.name,
-            province: v.province
+            city: v
           })
         }
         blocks.sort((a, b) => a.title.charCodeAt(0) - b.title.charCodeAt(0))
