@@ -28,9 +28,7 @@
       changeCity: function(){
         let el = event.currentTarget
         let city = el.innerHTML
-        console.log(city)
-        let province = ''
-        this.$store.dispatch('setPosition', {city, province})
+        this.$store.dispatch('setPositionCity', city)
         window.location.href = "/"
       }
     },
