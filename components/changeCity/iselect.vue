@@ -86,7 +86,7 @@
         window.location.href = "/"
       },
       changeCity: function(item) {
-        let city = item.label
+        let city = item
         let province = ''
         this.$store.dispatch('setPosition', {city, province})
         window.location.href = "/"
