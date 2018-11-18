@@ -3,6 +3,10 @@
 > My world-class Nuxt.js project
 > 高仿美团PC端网站项目
 
+### 注意: 此项目没有支付接口
+
+项目演示地址：http://118.31.69.104
+
 ## Build Setup
 
 ``` bash
