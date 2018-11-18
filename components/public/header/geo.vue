@@ -6,7 +6,7 @@
       to="/changeCity">
       切换城市
     </nuxt-link>
-    [咸阳  高陵  临潼]
+    [某地  某地  某地]
   </div>
 </template>
 

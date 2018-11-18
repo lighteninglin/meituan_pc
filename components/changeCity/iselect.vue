@@ -81,14 +81,12 @@
       }, 200),
       handleSelect: function(item) {
         let city = item.value
-        let province = ''
-        this.$store.dispatch('setPosition', {city, province})
+        this.$store.dispatch('setPositionCity', city)
         window.location.href = "/"
       },
       changeCity: function(item) {
         let city = item.label
-        let province = ''
-        this.$store.dispatch('setPosition', {city, province})
+        this.$store.dispatch('setPositionCity', city)
         window.location.href = "/"
       }
     }
